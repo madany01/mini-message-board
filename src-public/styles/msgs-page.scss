@@ -1,0 +1,56 @@
+#msgs-page {
+  display: flex;
+  flex-direction: column;
+
+  .add-msg {
+    align-self: flex-end;
+
+    padding: 1.2rem 2.4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    background-color: var(--color-indigo);
+    color: var(--add-message-color);
+    border-radius: 0.8rem;
+
+    margin-bottom: 2.4rem;
+  }
+
+  .msg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .msg-card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 2.4rem 1.6rem;
+    grid-template-areas: 'user date' 'body body';
+    align-items: center;
+    padding: 2.4rem;
+    background-color: var(--section-bg-color);
+    border-radius: 1.6rem;
+  }
+
+  .msg-card .user {
+    grid-area: user;
+
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-brown);
+  }
+  .msg-card .date {
+    grid-area: date;
+
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--msg-date-color);
+  }
+  .msg-card .body {
+    grid-area: body;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--msg-body-color);
+  }
+}

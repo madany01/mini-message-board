@@ -1,3 +1,62 @@
-h1 {
-  color: navy;
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ____________________ colors ____________________ */
+:root {
+  --color-brown: #b16900;
+  --color-tomato: tomato;
+  --color-indigo: #7a004c;
+  --color-white: #fafafa;
+
+  /* _____ shared _____ */
+  --section-bg-color: rgba(6, 6, 6, 0.502);
+
+  /* _____ body _____ */
+  --body-bg-color: #000038;
+
+  /* _____ header _____ */
+  --header-bg-color: #000;
+  --header-color: #fefe;
+  --header-shadow-color: #222;
+
+  /* _____ msgs page 1 _____ */
+  --add-message-color: #eaeaea;
+
+  --msg-date-color: #646464;
+  --msg-body-color: #bab0cf;
+
+  /* _____ form page 2 _____ */
+  --label-color: #aaa;
+  --input-bg-color: transparent;
+  --input-border-color: royalblue;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  font-family: 'Inter', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#page-header {
+  padding: 2.4rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+  background-color: var(--header-bg-color);
+  color: var(--header-color);
+  text-align: center;
+  text-transform: capitalize;
+  box-shadow: 0 0.2rem 1.6rem var(--header-shadow-color);
+
+  margin-bottom: 4rem;
+}
+
+main {
+  flex-grow: 1;
+  align-self: center;
+
+  width: min(80rem, 100%);
+
+  padding: 1.6rem;
 }

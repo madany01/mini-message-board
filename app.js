@@ -6,7 +6,6 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 
 const indexRouter = require('./routes/index')
-const usersRouter = require('./routes/users')
 
 const app = express()
 
@@ -26,7 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 // ____________________ routers ____________________
 
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
 
 // ____________________ error handling ____________________
 

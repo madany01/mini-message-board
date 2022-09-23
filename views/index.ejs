@@ -5,13 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/msgs-page.css" />
 
     <title><%= title %></title>
   </head>
 
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header id="page-header">
+      <div>mini message board</div>
+    </header>
+
+    <main>
+      <div id="msgs-page">
+        <a href="/new" class="add-msg">add message</a>
+
+        <ul class="msg-list">
+          <% locals.messages.forEach(msg => { %>
+          <li>
+            <div class="msg-card">
+              <p class="user"><%= msg.user %></p>
+              <p class="date"><%= msg.date.toUTCString() %></p>
+              <p class="body"><%= msg.text %></p>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>
